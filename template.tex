@@ -1,0 +1,102 @@
+\documentclass{article}
+
+% Packages
+\usepackage[utf8]{inputenc} % UTF-8 input
+\usepackage[T1]{fontenc}    % Font encoding
+\usepackage{amsmath,amssymb,amsfonts} % Mathematical symbols and fonts
+\usepackage{graphicx}       % Graphics inclusion
+\usepackage{hyperref}       % Hyperlinks
+\usepackage{geometry}       % Margin adjustments
+\usepackage{fancyhdr}       % Custom headers and footers
+\usepackage{lipsum}         % Placeholder text
+\usepackage{enumitem}       % Customizable lists
+\usepackage{caption}        % Better captions
+\usepackage{subcaption}     % Subfigures and subcaptions
+\usepackage{booktabs}       % Professional tables
+\usepackage{array}          % Advanced table formatting
+\usepackage{xcolor}         % Text and color customization
+\usepackage{titlesec}       % Section formatting
+\usepackage{float}          % Improved figure placement
+\usepackage[backend=bibtex]{biblatex}    % Bibliography management
+
+% Page setup
+\geometry{margin=1in}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{} % Clear header/footer
+\lhead{\textbf{Your Name}} % Left header
+\rhead{\textbf{Document Title}} % Right header
+\cfoot{Page \thepage} % Center footer
+
+% Title and Author
+\title{\textbf{Your Document Title}}
+\author{Your Name \\
+        Your Institution \\
+        \texttt{your.email@example.com}}
+\date{\today} % Current date
+
+% Custom section formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\small\bfseries}{\thesubsubsection}{1em}{}
+
+\addbibresource{references.bib} % Link to bibliography file
+\nocite{*}
+
+\begin{document}
+
+% Title Page
+\maketitle
+\tableofcontents
+\newpage
+
+% Abstract
+\begin{abstract}
+This document provides a comprehensive template for LaTeX documents, tailored for academic, professional, or general use.
+\end{abstract}
+
+% Sections
+\section{Introduction}
+\lipsum[1-2] % Example placeholder text
+
+\section{Main Content}
+\subsection{Subsection Example}
+Here is an example of a subsection.
+\lipsum[3-4]
+
+\subsection{Figures and Tables}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example-image}
+    \caption{Example figure.}
+    \label{fig:example}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        Data 1 & Data 2 & Data 3 \\
+        \hline
+    \end{tabular}
+    \caption{Example table.}
+    \label{tab:example}
+\end{table}
+
+\subsection{Mathematical Expressions}
+Here is an example of a mathematical equation:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\section{Conclusion}
+\lipsum[5-6]
+
+% References
+\newpage
+\printbibliography
+
+\end{document}
